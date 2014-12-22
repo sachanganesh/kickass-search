@@ -2,7 +2,10 @@
   "name": "kickass-search",
   "description": "Simple search API for Kickass Torrents.",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "q": "^1.1.2",
+    "request": "^2.51.0"
+  },
   "scripts": {
     "lint": "jshint .",
     "checkStyle": "jscs .",
