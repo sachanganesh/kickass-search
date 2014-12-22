@@ -21,9 +21,11 @@ exports.search = function (category, query) {
             console.log(err);
             deferred.reject(JSON.parse(err));
         } else {
-            var files = JSON.parse(body.results.files);
-            for (file in files)
+            var data = JSON.parse(body);
+            var files = data.results.files;
+            files.forEach(function (file) {
                 file.magnet.href = file.magnet.href.substring(file.magnet.href.indexOf('magnet:?xt'));
+            });
             deferred.resolve(files);
         }
     });
