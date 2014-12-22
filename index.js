@@ -1,7 +1,7 @@
 var Q = require('q');
 var request = require('request');
 
-function search(category, query) {
+exports.search = function (category, query) {
     var deferred = Q.defer();
     var url = 'https://www.kimonolabs.com/api/';
     if (category && query)
@@ -21,11 +21,11 @@ function search(category, query) {
             console.log(err);
             deferred.reject(JSON.parse(err));
         } else {
-            console.log(JSON.parse(body));
-            deferred.resolve(JSON.parse(body));
+            var files = JSON.parse(body.results.files);
+            for (file in files)
+                file.magnet.href = file.magnet.href.substring(file.magnet.href.indexOf('magnet:?xt'));
+            deferred.resolve(files);
         }
     });
     return deferred.promise;
 }
-
-exports.module = search;
