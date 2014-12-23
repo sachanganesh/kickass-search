@@ -1,7 +1,7 @@
 {
   "name": "kickass-search",
   "description": "Simple search API for Kickass Torrents",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "dependencies": {
     "q": "^1.1.2",
     "request": "^2.51.0"
