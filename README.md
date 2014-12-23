@@ -7,7 +7,7 @@ Simple search API for Kickass Torrents
 #### Submit a pull request!
 
 ## What it does
-After called, the API returns an array of JSON objects that represent listed torrent files.
+Allows a client to retrieve a list of torrents from Kickass Torrents as an array of JSON objects.
 
 ## Installation
 
