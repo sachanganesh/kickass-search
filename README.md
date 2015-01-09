@@ -44,7 +44,7 @@ sudo npm install kickass-search --save
 	var kickass = require('kickass-search');
 	var query = 'catcher in the rye';
 	var data;
-	kickass.search(, query).then(function (body) {
+	kickass.search(query).then(function (body) {
 		data = body;
 	});
 
@@ -53,7 +53,7 @@ sudo npm install kickass-search --save
 	var category = 'ebooks';
 	var query = 'catcher in the rye';
 	var data;
-	kickass.search(category).then(function (body) {
+	kickass.search(category, query).then(function (body) {
 		data = body;
 	});
 
