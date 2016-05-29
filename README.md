@@ -1,5 +1,7 @@
 # kickass-search
 
+## WARNING: This library is deprecated. It relies on the now-nonfunctioning KimonoLabs API. *Sorry!* ##
+
 [![NPM](https://nodei.co/npm/kickass-search.png)](https://nodei.co/npm/kickass-search/)
 
 [![build status](https://secure.travis-ci.org/sachanganesh/kickass-search.png)](http://travis-ci.org/sachanganesh/kickass-search)
